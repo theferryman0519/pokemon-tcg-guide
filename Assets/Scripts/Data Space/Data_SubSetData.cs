@@ -18,7 +18,8 @@ public class Data_SubSetData {
 	public string SubSetName { get; set; }
 	public string SubSetDataName { get; set; }
 	public string SubSetMainSetAbbrev { get; set; }
-	public string SubSetReleaseDate { get; set; }
+	
+	public System.DateTime SubSetReleaseDate { get; set; }
 
 	public Sprite SubSetSprite { get; set; }
 	

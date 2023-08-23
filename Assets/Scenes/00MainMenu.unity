@@ -157,6 +157,7 @@ MonoBehaviour:
   Scene02: 02OverallList
   Scene03: 03SpecificSetList
   Scene04: 04SpecificCardList
+  Scene05: 05AllCardStats
 --- !u!4 &175018317
 Transform:
   m_ObjectHideFlags: 0
@@ -368,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9b7775c06e4497a88024547c8ac11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirebaseUrl: https://pokemon-tcg-guide-default-rtdb.firebaseio.com/
 --- !u!4 &1109245524
 Transform:
   m_ObjectHideFlags: 0
@@ -1123,6 +1125,138 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee618e1e859b447f9963eded6910b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UserProfile: none
+  SetChosen: none
+  SubSetTitle: none
+  SubSetChosen: none
+  OGS_Base: {fileID: 21300000, guid: f217cce95a4b14651acfd7be403febd6, type: 3}
+  OGS_Jungle: {fileID: 21300000, guid: d2a5e64b7d2aa40788deba269138685a, type: 3}
+  OGS_WizardBlackStarPromos: {fileID: 21300000, guid: 7ce91bc5f535e470f978c74eac0bd2a4, type: 3}
+  OGS_Fossil: {fileID: 21300000, guid: bd6637a47832a4fcd9f9928b80e6f13e, type: 3}
+  OGS_Base2: {fileID: 21300000, guid: c726a1751fa5045d8ae7e4c245e80e35, type: 3}
+  OGS_TeamRocket: {fileID: 21300000, guid: 9442d05b8c83e4281972a00022022848, type: 3}
+  GYM_GymHeroes: {fileID: 21300000, guid: f0f661528f7e041f0b68ee2415513827, type: 3}
+  GYM_GymChallenge: {fileID: 21300000, guid: bfd99cde2f37c4882a1372949cf54ce4, type: 3}
+  NEO_NeoGenesis: {fileID: 21300000, guid: 2e05fa78527a34001a987903486f3167, type: 3}
+  NEO_NeoDiscovery: {fileID: 21300000, guid: cbc887768d9f245969b74aa95deb6908, type: 3}
+  NEO_SouthernIslands: {fileID: 21300000, guid: 2c43a8ca764f2467a822116009af6cb4, type: 3}
+  NEO_NeoRevelation: {fileID: 21300000, guid: 20988747613b4476bb1ab3733b39efe8, type: 3}
+  NEO_NeoDestiny: {fileID: 21300000, guid: f9593facbc90c4b4bacdb8f82449c29e, type: 3}
+  LCS_LegendaryCollection: {fileID: 21300000, guid: 34fe726b0bd8f40fdac719a24882f112, type: 3}
+  EC_Expedition: {fileID: 21300000, guid: 2a1f397ade49049e889bca1fa2316a68, type: 3}
+  EC_Aquapolis: {fileID: 21300000, guid: 1652f499397df4810b2282ed39e995f6, type: 3}
+  EC_Skyridge: {fileID: 21300000, guid: d542e7e0649ea41db8adf6df02583671, type: 3}
+  EX_RubySapphire: {fileID: 21300000, guid: 5d6e8de2e4b3b4f8fa4ce5c83dde234a, type: 3}
+  EX_Sandstorm: {fileID: 21300000, guid: 2306db87910694a36af01b4af9dc7264, type: 3}
+  EC_NintendoBlackStarPromos: {fileID: 21300000, guid: 1a188e61ab6db4c788b25f4ec3cfdace, type: 3}
+  EX_Dragon: {fileID: 21300000, guid: db5aec4a012054f00a4df2d232e26cf1, type: 3}
+  EX_TeamMagmaTeamAqua: {fileID: 21300000, guid: efb2aa8dd9fe945ffb81ed29d18ef26a, type: 3}
+  EX_HiddenLegends: {fileID: 21300000, guid: a03fd9a3dffb44c6996a23afc25fafe4, type: 3}
+  EX_FireRedLeafGreen: {fileID: 21300000, guid: 9e4488c61b92349fcbc575f4ed4fddca, type: 3}
+  EX_PopSeries1: {fileID: 21300000, guid: b2d97e9acdb7f459796e3a8a99f724d5, type: 3}
+  EX_TeamRocketReturns: {fileID: 21300000, guid: 4b0b3616dcd4e453bbd6f5bc43df6039, type: 3}
+  EX_Deoxys: {fileID: 21300000, guid: 3a39000856f874087955799dbe9563ea, type: 3}
+  EX_Emerald: {fileID: 21300000, guid: f6f9ea1b098b846b296db35bc902f48f, type: 3}
+  EX_PopSeries2: {fileID: 21300000, guid: 52244e0d488c9495ea52c0ebe01c5f79, type: 3}
+  EX_UnseenForces: {fileID: 21300000, guid: c50c5cb45cb394c0dbc6c3a2c045b731, type: 3}
+  EX_DeltaSpecies: {fileID: 21300000, guid: 7afd33a7bcf234a349a8b47cb7dd0a34, type: 3}
+  EX_LegendMaker: {fileID: 21300000, guid: 2dfe085f003cd41c9839feb65df1e6b5, type: 3}
+  EX_PopSeries3: {fileID: 21300000, guid: cc9b4df15265a45308715bf7a0c61a6a, type: 3}
+  EX_HolonPhantoms: {fileID: 21300000, guid: ff2614d8f5efc4f4a9924ee3de4cc64e, type: 3}
+  EX_PopSeries4: {fileID: 21300000, guid: 9c075260e654745aba33424acb0819b6, type: 3}
+  EX_CrystalGuardians: {fileID: 21300000, guid: 541a2bc80ada349c1a144015b60901b7, type: 3}
+  EX_DragonFrontiers: {fileID: 21300000, guid: b3197b5debe6349dfad1715927614249, type: 3}
+  EX_PowerKeepers: {fileID: 21300000, guid: 3b2f8891d7ff94ced881cc2f08795ce7, type: 3}
+  EX_PopSeries5: {fileID: 21300000, guid: 174b7e7eca91c479ea3f00e610062d6f, type: 3}
+  DP_DiamondPearl: {fileID: 21300000, guid: bc6ac694339d94b2c9a22b0fe8cf5e1c, type: 3}
+  DP_DiamondPearlPromos: {fileID: 21300000, guid: ee9892703daa043e7b6596e13ff0979a, type: 3}
+  DP_MysteriousTreasures: {fileID: 21300000, guid: dea174b9ff96741bab21174b25e31d9f, type: 3}
+  DP_PopSeries6: {fileID: 21300000, guid: 273f4cfa708484f9b99e8cfdbc5b51f3, type: 3}
+  DP_SecretWonders: {fileID: 21300000, guid: b7ace9890801e45eca66809b547aedd7, type: 3}
+  DP_GreatEncounters: {fileID: 21300000, guid: 46377615cab5a44859db63dd3b0520b7, type: 3}
+  DP_PopSeries7: {fileID: 21300000, guid: 5f03296a1ffee433eaa7311637ff618c, type: 3}
+  DP_MajesticDawn: {fileID: 21300000, guid: 4655151ef0e024fcfaa23e20b7e60da2, type: 3}
+  DP_LegendsAwakened: {fileID: 21300000, guid: 4d2e78b06ecb84a159679c2d9b124b4b, type: 3}
+  DP_PopSeries8: {fileID: 21300000, guid: 9c2336ac0144d4d58991c2242b148deb, type: 3}
+  DP_Stormfront: {fileID: 21300000, guid: ccb7fdeb51aa64cc3a89fa70a18bc946, type: 3}
+  PLAT_Platinum: {fileID: 21300000, guid: a2f7af9c042324451a84d1b276b7c01c, type: 3}
+  PLAT_PopSeries9: {fileID: 21300000, guid: 904507ad652ff435b8ca6eddeb0cf9f1, type: 3}
+  PLAT_RisingRivals: {fileID: 21300000, guid: 22320e040758d4a28af48637c406197a, type: 3}
+  PLAT_SupremeVictors: {fileID: 21300000, guid: 81f9178f86f984d0591d7b5c4fde6d87, type: 3}
+  PLAT_Arceus: {fileID: 21300000, guid: 15ada8304d7a549da93b5b7375a2052c, type: 3}
+  HGSS_HeartGoldSoulSilver: {fileID: 21300000, guid: fb7240e968a6e4f4da45fca137904ffc, type: 3}
+  HGSS_HeartGoldSoulSilverPromos: {fileID: 21300000, guid: 3afa724642e9e4c3a8c045202768c313, type: 3}
+  HGSS_Unleashed: {fileID: 21300000, guid: 4a7253dc136a64b8484eedb526d4e0e0, type: 3}
+  HGSS_Undaunted: {fileID: 21300000, guid: 3df3ee8ee6d2f42e8b8e0e94613f4929, type: 3}
+  HGSS_Triumphant: {fileID: 21300000, guid: 72a232c924c2d456fb40b62be02a9259, type: 3}
+  HGSS_CallOfLegends: {fileID: 21300000, guid: 4dcc63be69cf94263988c1ae1db45327, type: 3}
+  BW_BlackWhite: {fileID: 21300000, guid: 6f11fbbbb92de4775b85fb53532d627b, type: 3}
+  BW_EmergingPowers: {fileID: 21300000, guid: 3e54a6e9d7c484939811c7604d96e5f6, type: 3}
+  BW_NobleVictories: {fileID: 21300000, guid: ce470068db1cc4c1c9c3756179a68b12, type: 3}
+  BW_NextDestinies: {fileID: 21300000, guid: 8c4a9a3063bd846648d04eeb2d6c285d, type: 3}
+  BW_DarkExplorers: {fileID: 21300000, guid: f6910f74f9917461f8b8ba2e481036ce, type: 3}
+  BW_DragonsExalted: {fileID: 21300000, guid: 48d3f6309bf6f458c82248fcfd249916, type: 3}
+  BW_DragonVault: {fileID: 21300000, guid: ccb2824792a844556a8fdfd8f649b412, type: 3}
+  BW_BoundariesCrossed: {fileID: 21300000, guid: 0e5227622da6846088e15699b12d3c6d, type: 3}
+  BW_PlasmaStorm: {fileID: 21300000, guid: 579fd670a6800421eb91d8785554c238, type: 3}
+  BW_PlasmaFreeze: {fileID: 21300000, guid: 2057b1e72dfce432fa7d52842d5a4ee2, type: 3}
+  BW_PlasmaBlast: {fileID: 21300000, guid: 0f2bbb03c3d0d4eb8a48eeb4cc733d59, type: 3}
+  BW_LegendaryTreasures: {fileID: 21300000, guid: 2f0b6f0184994408cbcb08bc121ca519, type: 3}
+  XY_KalosStarterSet: {fileID: 21300000, guid: 7823857c3ff1c4c73909b0b7a7952746, type: 3}
+  XY_XY: {fileID: 21300000, guid: 37d31169f2cb648e3bf1f7939b617cba, type: 3}
+  XY_XYPromos: {fileID: 21300000, guid: c5cdf3827fc544507b87f3d1676b4137, type: 3}
+  XY_Flashfire: {fileID: 21300000, guid: debe6b0f929e9470897d04b6fc3403cf, type: 3}
+  XY_FuriousFists: {fileID: 21300000, guid: 98953dd1f1e574716ab8b69fa52f5df4, type: 3}
+  XY_PhantomForces: {fileID: 21300000, guid: 4a277a10067204b8dba1d3a29b155f82, type: 3}
+  XY_PrimalClash: {fileID: 21300000, guid: 3c591c46dc892438b8dcecb2942364a9, type: 3}
+  XY_DoubleCrisis: {fileID: 21300000, guid: 63d063161c11249f68ce7a11de0806d1, type: 3}
+  XY_RoaringSkies: {fileID: 21300000, guid: e57b7dcf61df441988fa9f8ec19fa77a, type: 3}
+  XY_AncientOrigins: {fileID: 21300000, guid: 74e22645e998442a19489bcb97d131ca, type: 3}
+  XY_BreakThrough: {fileID: 21300000, guid: b0fc78bc509294bfc8e398ea84018d91, type: 3}
+  XY_BreakPoint: {fileID: 21300000, guid: d1f05e136c25a42ebaa287ec7f53785d, type: 3}
+  XY_Generations: {fileID: 21300000, guid: 3d17623fba5fb4e2c90c28341810d138, type: 3}
+  XY_FatesCollide: {fileID: 21300000, guid: 84be858a1b6704c84af56e24e42630e9, type: 3}
+  XY_SteamSiege: {fileID: 21300000, guid: 76d576d9dacfb4fa6aa68cb70736c547, type: 3}
+  XY_Evolutions: {fileID: 21300000, guid: 06517dbe4ddd24fd1a7d2a5844efdcb7, type: 3}
+  SUMO_SunMoon: {fileID: 21300000, guid: 7e1237e785bb2416ca917eb66672620c, type: 3}
+  SUMO_SunMoonPromos: {fileID: 21300000, guid: 96ce6e44af05d4f4aa196ce10617ca91, type: 3}
+  SUMO_GuardiansRising: {fileID: 21300000, guid: aab050781f76b445f9aa687cfe0b07ae, type: 3}
+  SUMO_BurningShadows: {fileID: 21300000, guid: 4f04c3324486e42438752d84b1a7abd9, type: 3}
+  SUMO_ShiningLegends: {fileID: 21300000, guid: bdbc864a666784790ae6986471b0556b, type: 3}
+  SUMO_CrimsonInvasion: {fileID: 21300000, guid: 9483fead00ff2417786baad904ead8b7, type: 3}
+  SUMO_UltraPrism: {fileID: 21300000, guid: c77d97d0f9d074578b6d62046d094a8e, type: 3}
+  SUMO_ForbiddenLight: {fileID: 21300000, guid: edda17989975a4a3787705dd5ce90636, type: 3}
+  SUMO_CelestialStorm: {fileID: 21300000, guid: 918dbd341d37d47fea60e977e5e0c846, type: 3}
+  SUMO_DragonMajesty: {fileID: 21300000, guid: 03c25302da8c24cda9691882ac3ec407, type: 3}
+  SUMO_LostThunder: {fileID: 21300000, guid: 15b57412bf83946a1b2f79c5ac324994, type: 3}
+  SUMO_TeamUp: {fileID: 21300000, guid: b56ccf4dc434c4d4087f2d72112ce652, type: 3}
+  SUMO_DetectivePikachu: {fileID: 21300000, guid: b42c3dbc244c94215a9ed4c4eb2665bc, type: 3}
+  SUMO_UnbrokenBonds: {fileID: 21300000, guid: 8fd9d8c86b0444ca1a554100713306e2, type: 3}
+  SUMO_UnifiedMinds: {fileID: 21300000, guid: c01093a84745a488fb0158cd77f21ddd, type: 3}
+  SUMO_HiddenFates: {fileID: 21300000, guid: 493a747119aff4a259c4411aa1163f4d, type: 3}
+  SUMO_CosmicEclipse: {fileID: 21300000, guid: 09042c7371cf240bcb173970dbd81311, type: 3}
+  SWSH_SwordShield: {fileID: 21300000, guid: 9565539ad99f74ec1a90fc2bb76ae462, type: 3}
+  SWSH_SwordShieldPromos: {fileID: 21300000, guid: ea5cfea4f65764c99b5c8db92d105952, type: 3}
+  SWSH_RebelClash: {fileID: 21300000, guid: a589c46f04e7a470a93c3a6639f1bfa6, type: 3}
+  SWSH_DarknessAblaze: {fileID: 21300000, guid: 644f606dadc9f490489ae73217b37d09, type: 3}
+  SWSH_ChampionsPath: {fileID: 21300000, guid: adcf27a9f2d27433d95a913846065e84, type: 3}
+  SWSH_VividVoltage: {fileID: 21300000, guid: da17d4bfb063741749a0fc9ed255d3e8, type: 3}
+  SWSH_ShiningFates: {fileID: 21300000, guid: 0fd820ba7559448308a00eea053a2a8c, type: 3}
+  SWSH_BattleStyles: {fileID: 21300000, guid: 578864fc3a52546b2a6de8c187dcdbcc, type: 3}
+  SWSH_ChillingReign: {fileID: 21300000, guid: ea68553d82b324f8cb14fcc8f364b68c, type: 3}
+  SWSH_EvolvingSkies: {fileID: 21300000, guid: 37746c50c35064aee8712e8d3343f213, type: 3}
+  SWSH_Celebrations: {fileID: 21300000, guid: d580547184da44167a2019ae909eb55e, type: 3}
+  SWSH_FusionStrike: {fileID: 21300000, guid: e4f47d19b46274a0f9cc56c5abaf0931, type: 3}
+  SWSH_BrilliantStars: {fileID: 21300000, guid: 5e09f6e73a4764c039b09582f5926fa8, type: 3}
+  SWSH_AstralRadiance: {fileID: 21300000, guid: 8fdd465115ab549a08e4467a860e5019, type: 3}
+  SWSH_PokemonGo: {fileID: 21300000, guid: 6b5440d69702c49e29e4c53e1a361986, type: 3}
+  SWSH_LostOrigin: {fileID: 21300000, guid: 969463e680821445093cac0107bed69f, type: 3}
+  SWSH_SilverTempest: {fileID: 21300000, guid: c09bab0f532734f78ae4fa83ba91e474, type: 3}
+  SWSH_CrownZenith: {fileID: 21300000, guid: c77856244bc4544898221b6ff8707d6d, type: 3}
+  SCVI_ScarletViolet: {fileID: 21300000, guid: 188cb62c0582e43459ce2e3f85bf1967, type: 3}
+  SCVI_ScarletVioletPromos: {fileID: 21300000, guid: bad706ad4f10a43799bba4c44d9af40f, type: 3}
+  SCVI_PaldeaEvolved: {fileID: 21300000, guid: f65890110d2a24169bf6cbd2b175db1b, type: 3}
+  SCVI_ObsidianFlames: {fileID: 21300000, guid: 076a9886aee984796881a26539f7f6f8, type: 3}
 --- !u!4 &2010722602
 Transform:
   m_ObjectHideFlags: 0

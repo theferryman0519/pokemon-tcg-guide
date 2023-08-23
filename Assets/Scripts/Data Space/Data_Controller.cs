@@ -12,10 +12,25 @@ public class Data_Controller : MonoBehaviour {
 // --------------- PUBLIC VARIABLES ---------------
     public string UserProfile = "none";
     public string SetChosen = "none";
+    public string SubSetTitle = "none";
+    public string SubSetChosen = "none";
+
+    public Sprite SubSetSprite;
 
     public Dictionary<string, string> MainSetNames = new Dictionary<string, string>();
     public Dictionary<string, string> MainSetAbbrevs = new Dictionary<string, string>();
     public Dictionary<string, Data_SubSetData> SubSetInfo = new Dictionary<string, Data_SubSetData>();
+    public Dictionary<string, Data_CardData> CardInfo = new Dictionary<string, Data_CardData>();
+
+    public string UpdatedCardName = "none";
+	public string UpdatedCardNumber = "none";
+	public string UpdatedCardJsonNumber = "none";
+	public string UpdatedCardType = "none";
+	public double UpdatedCardValue = 0.00;
+	public int UpdatedCardCareyHave = 0;
+	public int UpdatedCardCareyDuplicate = 0;
+	public int UpdatedCardKCHave = 0;
+	public int UpdatedCardSlotNumber = 0;
 
 	public Sprite OGS_Base;
 	public Sprite OGS_Jungle;
@@ -221,7 +236,7 @@ public class Data_Controller : MonoBehaviour {
         MainSetAbbrevs.Add("Set02", "GYM");
         MainSetAbbrevs.Add("Set03", "NEO");
         MainSetAbbrevs.Add("Set04", "LCS");
-        MainSetAbbrevs.Add("Set05", "E-Card Series");
+        MainSetAbbrevs.Add("Set05", "EC");
         MainSetAbbrevs.Add("Set06", "EX");
         MainSetAbbrevs.Add("Set07", "DP");
         MainSetAbbrevs.Add("Set08", "PLAT");

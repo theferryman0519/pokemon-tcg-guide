@@ -70,6 +70,13 @@ public class Scene_Controller : MonoBehaviour {
             GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificSetList>().InstantiateSubSetListB();
         }
     }
+
+    public void SuccessfulDownloadSubSetData() {
+        if (SceneManager.GetActiveScene().name == "04SpecificCardList") {
+            Debug.Log("Scene_Controller: " + "Successfully downloaded the sub set data");
+            GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificCardList>().InstantiateCardListB();
+        }
+    }
 	
 // ---------------------------------------- END: VOID FUNCTIONS ----------------------------------------
 }}

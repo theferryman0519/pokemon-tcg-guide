@@ -1,6 +1,7 @@
 // Main Dependencies
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
@@ -16,10 +17,10 @@ public class Scene_SpecificSetList : MonoBehaviour {
 		
 // ---------------------------------------- START: LIST OF VARIABLES ----------------------------------------
 // --------------- PUBLIC VARIABLES ---------------
-	public Image[] allImages;
-	public Text[] allWhiteTexts;
-	public Text[] allBlueTexts;
-	public Text[] allYellowTexts;
+	public List<Image> allImages = new List<Image>();
+	public List<Text> allWhiteTexts = new List<Text>();
+	public List<Text> allBlueTexts = new List<Text>();
+	public List<Text> allYellowTexts = new List<Text>();
 
 	public Text TitleText;
 	public Text MainSetText;
@@ -134,12 +135,15 @@ public class Scene_SpecificSetList : MonoBehaviour {
 		Debug.Log("Scene_SpecificSetList: " + "All objects fading out end");
 
 		if (OptionInt == 1) {
-			Debug.Log("Scene_SpecificSetList: " + "Change scenes to Specific Set List");
-			SceneManager.LoadScene(Core_Controller.Instance.Scene03);
+			Debug.Log("Scene_SpecificSetList: " + "Change scenes to Specific Card List");
+			SceneManager.LoadScene(Core_Controller.Instance.Scene04);
 		}
 
 		else if (OptionInt == 2) {
 			Data_Controller.Instance.SetChosen = "none";
+			Data_Controller.Instance.SubSetChosen = "none";
+			Data_Controller.Instance.SubSetTitle = "none";
+			Data_Controller.Instance.SubSetSprite = Data_Controller.Instance.OGS_Base;
 			Data_Controller.Instance.SubSetInfo.Clear();
 			Debug.Log("Scene_SpecificSetList: " + "Change scenes to Overall List");
 			SceneManager.LoadScene(Core_Controller.Instance.Scene02);
@@ -154,11 +158,23 @@ public class Scene_SpecificSetList : MonoBehaviour {
 		StartCoroutine(FadeOutAll());
 	}
 
+	public void SubSetButtonClicking(string SubSetListName, Data_SubSetData SubSet) {
+		Debug.Log("Scene_SpecificSetList: " + "Button pressed for Sub Set");
+		Data_Controller.Instance.SubSetChosen = SubSetListName;
+		Data_Controller.Instance.SubSetTitle = SubSet.SubSetName;
+		Data_Controller.Instance.SubSetSprite = SubSet.SubSetSprite;
+		OptionInt = 1;
+		StartCoroutine(FadeOutAll());
+	}
+
 	public void InstantiateSubSetListA() {
+		Debug.Log("Scene_SpecificSetList: " + "Initializing instantiation part 1");
 		Firebase_Controller.Instance.DownloadMainSetData(Data_Controller.Instance.MainSetAbbrevs[Data_Controller.Instance.SetChosen]);
 	}
 
 	public void InstantiateSubSetListB() {
+		Debug.Log("Scene_SpecificSetList: " + "Initializing instantiation part 2");
+
 		// Add Specifically Chosen Sub Lists
 		List<Data_SubSetData> SpecificSubSetInfo = new List<Data_SubSetData>();
 
@@ -167,6 +183,9 @@ public class Scene_SpecificSetList : MonoBehaviour {
 				SpecificSubSetInfo.Add(SubSet.Value);
 			}
 		}
+
+		// Sort By Date
+		SpecificSubSetInfo = SpecificSubSetInfo.OrderBy(SubSet => SubSet.SubSetReleaseDate).ToList();
 
 		// Instantiate Sub Lists
 		ScrollViewContent.sizeDelta = new Vector2(0, (SpecificSubSetInfo.Count * 350));
@@ -180,11 +199,18 @@ public class Scene_SpecificSetList : MonoBehaviour {
 			SubSet.name = SubSetData.SubSetDataName;
 
 			SubSet.transform.GetChild(0).GetComponent<Text>().text = SubSetData.SubSetName;
-			SubSet.transform.GetChild(1).GetComponent<Text>().text = "Released:" + "\n" + SubSetData.SubSetReleaseDate;
+			SubSet.transform.GetChild(1).GetComponent<Text>().text = "Released:" + "\n" + SubSetData.SubSetReleaseDate.ToString("MM-dd-yyyy");
 			SubSet.transform.GetChild(2).GetComponent<Image>().sprite = SubSetData.SubSetSprite;
-			// SubSetButton = SubSet.transform.GetChild(4).GetComponent<Button>();
-			// SubSetButton.onClick.AddListener(() => SubSetButtonClicking(SubSet.name));
+			SubSetButton = SubSet.GetComponent<Button>();
+			SubSetButton.onClick.AddListener(() => SubSetButtonClicking(SubSet.name, SubSetData));
+
+			allImages.Add(SubSet.GetComponent<Image>());
+			allImages.Add(SubSet.transform.GetChild(2).GetComponent<Image>());
+			allWhiteTexts.Add(SubSet.transform.GetChild(0).GetComponent<Text>());
+			allWhiteTexts.Add(SubSet.transform.GetChild(1).GetComponent<Text>());
 		}
+
+		Debug.Log("Scene_SpecificSetList: " + "All sub sets have been instantiated");
 	}
 	
 // ---------------------------------------- END: VOID FUNCTIONS ----------------------------------------
