@@ -159,7 +159,7 @@ public class Firebase_Controller : MonoBehaviour {
                     string SpriteString = SubSetData.SubSetMainSetAbbrev + "_" + SubSetData.SubSetDataName;
 
                     Data_Controller.Instance.SetSubSetSprite(SpriteString, SubSetData);
-                    Data_Controller.Instance.SubSetInfo.Add(SpriteString, SubSetData);
+                    Data_Controller.Instance.SubSetInfoStats.Add(SpriteString, SubSetData);
                 }
             }
 
@@ -197,7 +197,7 @@ public class Firebase_Controller : MonoBehaviour {
 
                     string CardString = MainSet + "_" + SubSet + "_" + CardData.CardJsonNumber;
 
-                    Data_Controller.Instance.CardInfo.Add(CardString, CardData);
+                    Data_Controller.Instance.CardInfoStats.Add(CardString, CardData);
                 }
             }
 

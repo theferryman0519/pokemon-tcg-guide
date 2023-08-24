@@ -144,7 +144,8 @@ public class Scene_AllStats : MonoBehaviour {
 		}
 		
 		Debug.Log("Scene_AllStats: " + "All objects fading out end");
-		Data_Controller.Instance.SubSetInfo.Clear();
+		Data_Controller.Instance.SubSetInfoStats.Clear();
+		Data_Controller.Instance.CardInfoStats.Clear();
 		Debug.Log("Scene_AllStats: " + "Change scenes to Overall List");
 		SceneManager.LoadScene(Core_Controller.Instance.Scene02);
 	}
@@ -167,7 +168,7 @@ public class Scene_AllStats : MonoBehaviour {
 		// Add Specifically Chosen Sub Lists
 		List<Data_SubSetData> SpecificSubSetInfo = new List<Data_SubSetData>();
 
-		foreach (KeyValuePair<string, Data_SubSetData> SubSet in Data_Controller.Instance.SubSetInfo) {
+		foreach (KeyValuePair<string, Data_SubSetData> SubSet in Data_Controller.Instance.SubSetInfoStats) {
 			SpecificSubSetInfo.Add(SubSet.Value);
 		}
 
@@ -235,7 +236,7 @@ public class Scene_AllStats : MonoBehaviour {
 		List<string> FullDataString = new List<string>();
 		List<Data_SubSetData> FullDataSubs = new List<Data_SubSetData>();
 
-		foreach (KeyValuePair<string, Data_SubSetData> pair in Data_Controller.Instance.SubSetInfo) {
+		foreach (KeyValuePair<string, Data_SubSetData> pair in Data_Controller.Instance.SubSetInfoStats) {
 			FullDataString.Add(pair.Key);
 			FullDataSubs.Add(pair.Value);
 		}
@@ -267,7 +268,7 @@ public class Scene_AllStats : MonoBehaviour {
 			DuplicatesHave = 0;
 			DuplicatesValue = 0.00;
 
-			foreach (KeyValuePair<string, Data_CardData> CardPair in Data_Controller.Instance.CardInfo) {
+			foreach (KeyValuePair<string, Data_CardData> CardPair in Data_Controller.Instance.CardInfoStats) {
 				if (CardPair.Key.Contains(HolderName)) {
 					// Pao
 					if (Data_Controller.Instance.UserProfile == "Pao") {

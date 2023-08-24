@@ -22,7 +22,9 @@ public class Data_Controller : MonoBehaviour {
     public Dictionary<string, string> MainSetNames = new Dictionary<string, string>();
     public Dictionary<string, string> MainSetAbbrevs = new Dictionary<string, string>();
     public Dictionary<string, Data_SubSetData> SubSetInfo = new Dictionary<string, Data_SubSetData>();
+    public Dictionary<string, Data_SubSetData> SubSetInfoStats = new Dictionary<string, Data_SubSetData>();
     public Dictionary<string, Data_CardData> CardInfo = new Dictionary<string, Data_CardData>();
+    public Dictionary<string, Data_CardData> CardInfoStats = new Dictionary<string, Data_CardData>();
 
 	public double UpdatedCardValue = 0.00;
 
@@ -185,6 +187,9 @@ public class Data_Controller : MonoBehaviour {
         MainSetNames.Clear();
         MainSetAbbrevs.Clear();
         SubSetInfo.Clear();
+        SubSetInfoStats.Clear();
+        CardInfo.Clear();
+        CardInfoStats.Clear();
 
 		SetMainSetNames();
         SetMainSetAbbrevs();
