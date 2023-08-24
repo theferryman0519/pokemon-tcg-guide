@@ -61,6 +61,10 @@ public class Scene_ProfileList : MonoBehaviour {
 		CardListCareyButton.onClick.AddListener(CardListCareyButtonClicking);
 		CardListPaoButton.onClick.AddListener(CardListPaoButtonClicking);
 
+		// Clear Lists
+		Data_Controller.Instance.SubSetInfo.Clear();
+		Data_Controller.Instance.CardInfo.Clear();
+
 		// Start Coroutine
 		Debug.Log("Scene_ProfileList: " + "Initiate logos fading");
 		StartCoroutine(FadeInAll());

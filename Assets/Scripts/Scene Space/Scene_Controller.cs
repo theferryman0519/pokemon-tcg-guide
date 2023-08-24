@@ -65,16 +65,28 @@ public class Scene_Controller : MonoBehaviour {
 // ---------------------------------------- END: ENUMERATOR FUNCTIONS ----------------------------------------
 // ---------------------------------------- START: VOID FUNCTIONS ----------------------------------------
 	public void SuccessfulDownloadMainSetData() {
-        if (SceneManager.GetActiveScene().name == "03SpecificSetList") {
-            Debug.Log("Scene_Controller: " + "Successfully downloaded the main set data");
-            GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificSetList>().InstantiateSubSetListB();
-        }
+        Debug.Log("Scene_Controller: " + "Successfully downloaded the main set data");
+        GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificSetList>().InstantiateSubSetListB();
     }
 
     public void SuccessfulDownloadSubSetData() {
-        if (SceneManager.GetActiveScene().name == "04SpecificCardList") {
-            Debug.Log("Scene_Controller: " + "Successfully downloaded the sub set data");
-            GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificCardList>().InstantiateCardListB();
+        Debug.Log("Scene_Controller: " + "Successfully downloaded the sub set data");
+        GameObject.Find("MainFunctions").GetComponentInChildren<Scene_SpecificCardList>().InstantiateCardListB();
+    }
+
+    public void InstantiateFullData() {
+        Debug.Log("Scene_Controller: " + "Successfully downloaded all data");
+        GameObject.Find("MainFunctions").GetComponentInChildren<Scene_AllStats>().InstantiateSubSetListB();
+    }
+
+    public void InstantiateFullCardData() {
+        Debug.Log("Scene_Controller: " + "Successfully downloaded all card data for this sub set");
+
+        Data_Controller.Instance.AllStatsTracker += 1;
+
+        if (Data_Controller.Instance.AllStatsTracker >= (Data_Controller.Instance.SubSetInfo.Count - 2)) {
+            Debug.Log("Scene_Controller: " + "Successfully download every piece of card data for all stats");
+            GameObject.Find("MainFunctions").GetComponentInChildren<Scene_AllStats>().InputAllData();
         }
     }
 	
