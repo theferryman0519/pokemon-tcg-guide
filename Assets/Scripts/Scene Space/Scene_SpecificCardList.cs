@@ -156,6 +156,7 @@ public class Scene_SpecificCardList : MonoBehaviour {
 
 		Data_Controller.Instance.SubSetChosen = "none";
 		Data_Controller.Instance.SubSetInfo.Clear();
+		Data_Controller.Instance.CardInfo.Clear();
 		Debug.Log("Scene_SpecificCardList: " + "Change scenes to Main Set List");
 		SceneManager.LoadScene(Core_Controller.Instance.Scene03);
 	}

@@ -1129,6 +1129,17 @@ MonoBehaviour:
   SetChosen: none
   SubSetTitle: none
   SubSetChosen: none
+  UpdatedCardName: none
+  UpdatedCardNumber: none
+  UpdatedCardJsonNumber: none
+  UpdatedCardType: none
+  UpdatedCardValue: 0
+  UpdatedCardCareyHave: 0
+  UpdatedCardCareyDuplicate: 0
+  UpdatedCardKCHave: 0
+  UpdatedCardSlotNumber: 0
+  AllStatsTracker: 0
+  SubSetSprite: {fileID: 0}
   OGS_Base: {fileID: 21300000, guid: f217cce95a4b14651acfd7be403febd6, type: 3}
   OGS_Jungle: {fileID: 21300000, guid: d2a5e64b7d2aa40788deba269138685a, type: 3}
   OGS_WizardBlackStarPromos: {fileID: 21300000, guid: 7ce91bc5f535e470f978c74eac0bd2a4, type: 3}
@@ -1257,6 +1268,7 @@ MonoBehaviour:
   SCVI_ScarletVioletPromos: {fileID: 21300000, guid: bad706ad4f10a43799bba4c44d9af40f, type: 3}
   SCVI_PaldeaEvolved: {fileID: 21300000, guid: f65890110d2a24169bf6cbd2b175db1b, type: 3}
   SCVI_ObsidianFlames: {fileID: 21300000, guid: 076a9886aee984796881a26539f7f6f8, type: 3}
+  SCVI_151: {fileID: 21300000, guid: da91d73ba26764588bad729ba7bae8c4, type: 3}
 --- !u!4 &2010722602
 Transform:
   m_ObjectHideFlags: 0

@@ -163,6 +163,7 @@ public class Data_Controller : MonoBehaviour {
 	public Sprite SCVI_ScarletVioletPromos;
 	public Sprite SCVI_PaldeaEvolved;
 	public Sprite SCVI_ObsidianFlames;
+    public Sprite SCVI_151;
 	
 // --------------- PRIVATE VARIABLES ---------------
 	
@@ -384,6 +385,7 @@ public class Data_Controller : MonoBehaviour {
             case "SCVI_ScarletVioletPromos": SubSetData.SubSetSprite = SCVI_ScarletVioletPromos; break;
             case "SCVI_PaldeaEvolved": SubSetData.SubSetSprite = SCVI_PaldeaEvolved; break;
             case "SCVI_ObsidianFlames": SubSetData.SubSetSprite = SCVI_ObsidianFlames; break;
+            case "SCVI_151": SubSetData.SubSetSprite = SCVI_151; break;
         }
     }
 	

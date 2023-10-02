@@ -164,7 +164,6 @@ public class Firebase_Controller : MonoBehaviour {
             }
 
             Scene_Controller.Instance.InstantiateFullData();
-            // DownloadAllDataB();
         });
     }
 

@@ -66,6 +66,10 @@ public class Scene_AllStats : MonoBehaviour {
 // ---------------------------------------- START: INITIAL FUNCTIONS ----------------------------------------
 // --------------- START FUNCTION ---------------
 	void Start() {
+		// Clear Original Data
+		Data_Controller.Instance.SubSetInfoStats.Clear();
+		Data_Controller.Instance.CardInfoStats.Clear();
+
 		// Instantiate List
 		InstantiateSubSetListA();
 
@@ -270,6 +274,7 @@ public class Scene_AllStats : MonoBehaviour {
 
 			foreach (KeyValuePair<string, Data_CardData> CardPair in Data_Controller.Instance.CardInfoStats) {
 				if (CardPair.Key.Contains(HolderName)) {
+					
 					// Pao
 					if (Data_Controller.Instance.UserProfile == "Pao") {
 						CardsHave += CardPair.Value.CardKCHave;
