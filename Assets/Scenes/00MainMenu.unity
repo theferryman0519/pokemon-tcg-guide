@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -1269,6 +1266,7 @@ MonoBehaviour:
   SCVI_PaldeaEvolved: {fileID: 21300000, guid: f65890110d2a24169bf6cbd2b175db1b, type: 3}
   SCVI_ObsidianFlames: {fileID: 21300000, guid: 076a9886aee984796881a26539f7f6f8, type: 3}
   SCVI_151: {fileID: 21300000, guid: da91d73ba26764588bad729ba7bae8c4, type: 3}
+  SCVI_ParadoxRift: {fileID: 466506120996924896, guid: d6b11b32f75d0461f8abe8eddc720446, type: 3}
 --- !u!4 &2010722602
 Transform:
   m_ObjectHideFlags: 0
